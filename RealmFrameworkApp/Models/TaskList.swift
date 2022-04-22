@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import RealmSwift
 
-class TaskList {
-    let name = ""
-    let date = Date()
-    let tasks = [Task]()
+class TaskList: Object {
+    @Persisted var name = ""
+    @Persisted var date = Date()
+    @Persisted var tasks = List<Task>()
 }
 
-class Task {
-    let name = ""
-    let note = ""
-    let date = Date()
-    let isComplete = false
+class Task: Object {
+    @Persisted var name = ""
+    @Persisted var note = ""
+    @Persisted var date = Date()
+    @Persisted var isComplete = false
 }
