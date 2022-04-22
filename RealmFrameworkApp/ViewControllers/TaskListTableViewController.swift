@@ -6,15 +6,18 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TaskListTableViewController: UITableViewController {
     
     // MARK: - Properties
-    var taskLists: [TaskList] = []
+    var taskLists: Results<TaskList>!
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        taskLists = StorageManager.shared.realm.objects(TaskList.self)
         createTempData()
         
         let addButton = UIBarButtonItem(
@@ -25,6 +28,10 @@ class TaskListTableViewController: UITableViewController {
         
         navigationItem.rightBarButtonItem = addButton
         navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 
     // MARK: - TableViewDataSource
@@ -114,6 +121,9 @@ extension TaskListTableViewController {
     }
     
     private func save(taskList: String) {
-        
+        let taskList = TaskList(value: [taskList])
+        StorageManager.shared.save(taskList)
+        let rowIndex = IndexPath(row: taskLists.index(of: taskList) ?? 0, section: 0)
+        tableView.insertRows(at: [rowIndex], with: .automatic)
     }
 }
