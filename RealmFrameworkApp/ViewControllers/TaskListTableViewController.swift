@@ -15,6 +15,8 @@ class TaskListTableViewController: UITableViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        createTempData()
+        
         let addButton = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
@@ -23,8 +25,6 @@ class TaskListTableViewController: UITableViewController {
         
         navigationItem.rightBarButtonItem = addButton
         navigationItem.leftBarButtonItem = editButtonItem
-        
-        createTempData()
     }
 
     // MARK: - TableViewDataSource
