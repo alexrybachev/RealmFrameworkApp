@@ -56,15 +56,47 @@
 		2841C64128130EF800731E9C /* RealmFrameworkApp */ = {
 			isa = PBXGroup;
 			children = (
-				2841C64228130EF800731E9C /* AppDelegate.swift */,
-				2841C64428130EF800731E9C /* SceneDelegate.swift */,
-				2841C64628130EF800731E9C /* ViewController.swift */,
-				2841C64828130EF800731E9C /* Main.storyboard */,
-				2841C64B28130EF900731E9C /* Assets.xcassets */,
-				2841C64D28130EF900731E9C /* LaunchScreen.storyboard */,
-				2841C65028130EF900731E9C /* Info.plist */,
+				2841C65628130F0100731E9C /* App */,
+				2841C65728130F0600731E9C /* ViewControllers */,
+				2841C65828130F1000731E9C /* Storyboards */,
+				2841C65928130F1900731E9C /* Resources */,
 			);
 			path = RealmFrameworkApp;
+			sourceTree = "<group>";
+		};
+		2841C65628130F0100731E9C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2841C64228130EF800731E9C /* AppDelegate.swift */,
+				2841C64428130EF800731E9C /* SceneDelegate.swift */,
+				2841C65028130EF900731E9C /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2841C65728130F0600731E9C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2841C64628130EF800731E9C /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2841C65828130F1000731E9C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2841C64828130EF800731E9C /* Main.storyboard */,
+				2841C64D28130EF900731E9C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2841C65928130F1900731E9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2841C64B28130EF900731E9C /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +321,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6P96P67U8G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RealmFrameworkApp/Info.plist;
+				INFOPLIST_FILE = RealmFrameworkApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6P96P67U8G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RealmFrameworkApp/Info.plist;
+				INFOPLIST_FILE = RealmFrameworkApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
