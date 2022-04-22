@@ -9,8 +9,8 @@ import Foundation
 
 class TaskList {
     let name = ""
-    let sate = Date()
-    let tasks: [Task] = []
+    let date = Date()
+    let tasks = [Task]()
 }
 
 class Task {

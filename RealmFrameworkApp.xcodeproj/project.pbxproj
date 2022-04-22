@@ -16,6 +16,8 @@
 		2841C65B2813119700731E9C /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841C65A2813119700731E9C /* TasksTableViewController.swift */; };
 		2841C65D281311BA00731E9C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841C65C281311BA00731E9C /* AlertController.swift */; };
 		2841C6612813127A00731E9C /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841C6602813127A00731E9C /* TaskList.swift */; };
+		2841C6632813188300731E9C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841C6622813188300731E9C /* DataManager.swift */; };
+		2841C665281318D100731E9C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841C664281318D100731E9C /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		2841C65A2813119700731E9C /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		2841C65C281311BA00731E9C /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		2841C6602813127A00731E9C /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		2841C6622813188300731E9C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2841C664281318D100731E9C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 		2841C65F281311CF00731E9C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2841C6622813188300731E9C /* DataManager.swift */,
+				2841C664281318D100731E9C /* StorageManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,9 +204,11 @@
 				2841C6612813127A00731E9C /* TaskList.swift in Sources */,
 				2841C64728130EF800731E9C /* TaskListTableViewController.swift in Sources */,
 				2841C65D281311BA00731E9C /* AlertController.swift in Sources */,
+				2841C6632813188300731E9C /* DataManager.swift in Sources */,
 				2841C64328130EF800731E9C /* AppDelegate.swift in Sources */,
 				2841C65B2813119700731E9C /* TasksTableViewController.swift in Sources */,
 				2841C64528130EF800731E9C /* SceneDelegate.swift in Sources */,
+				2841C665281318D100731E9C /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
