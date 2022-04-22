@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TaskListTableViewController.swift
 //  RealmFrameworkApp
 //
 //  Created by Aleksandr Rybachev on 22.04.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TaskListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
