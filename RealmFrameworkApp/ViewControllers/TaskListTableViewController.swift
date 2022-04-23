@@ -19,6 +19,7 @@ class TaskListTableViewController: UITableViewController {
         
         taskLists = StorageManager.shared.realm.objects(TaskList.self)
         createTempData()
+        sortedTaskList(0)
         
         let addButton = UIBarButtonItem(
             barButtonSystemItem: .add,
@@ -44,7 +45,13 @@ class TaskListTableViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         let taskList = taskLists[indexPath.row]
         content.text = taskList.name
-        content.secondaryText = "\(taskList.tasks.count)"
+        let currentTask = taskList.tasks.filter("isComplete = false")
+        if taskLists[indexPath.row].tasks.count > 0 && currentTask.count == 0 {
+            cell.accessoryType = .checkmark
+        } else {
+            content.secondaryText = "\(currentTask.count)"
+            cell.accessoryType = .none
+        }
         cell.contentConfiguration = content
         return cell
     }
@@ -86,6 +93,8 @@ class TaskListTableViewController: UITableViewController {
     
     // MARK: - IBactions
     @IBAction func sortingList(_ sender: UISegmentedControl) {
+        sortedTaskList(sender.selectedSegmentIndex)
+        tableView.reloadData()
     }
     
     
@@ -97,6 +106,14 @@ class TaskListTableViewController: UITableViewController {
     private func createTempData() {
         DataManager.shared.createTempData {
             self.tableView.reloadData()
+        }
+    }
+    
+    private func sortedTaskList(_ selectedIndex: Int?) {
+        if selectedIndex == nil || selectedIndex == 0 {
+            self.taskLists = taskLists.sorted(byKeyPath: "date", ascending: false)
+        } else {
+            self.taskLists = taskLists.sorted(byKeyPath: "name", ascending: true)
         }
     }
 }
