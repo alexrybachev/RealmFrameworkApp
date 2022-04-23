@@ -34,7 +34,6 @@ class TasksTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -89,7 +88,7 @@ class TasksTableViewController: UITableViewController {
         return UISwipeActionsConfiguration(actions: [doneAction, editAction, deleteAction])
     }
     
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
