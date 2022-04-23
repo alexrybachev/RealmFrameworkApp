@@ -19,7 +19,7 @@ class TaskListTableViewController: UITableViewController {
         
         taskLists = StorageManager.shared.realm.objects(TaskList.self)
         createTempData()
-        sortedTaskList(0)
+        sortedTaskList()
         
         let addButton = UIBarButtonItem(
             barButtonSystemItem: .add,
@@ -97,7 +97,6 @@ class TaskListTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    
     // MARK: - Private Methods
     @objc private func addButtonPressed() {
         showAlert()
@@ -109,7 +108,7 @@ class TaskListTableViewController: UITableViewController {
         }
     }
     
-    private func sortedTaskList(_ selectedIndex: Int?) {
+    private func sortedTaskList(_ selectedIndex: Int? = nil) {
         if selectedIndex == nil || selectedIndex == 0 {
             self.taskLists = taskLists.sorted(byKeyPath: "date", ascending: false)
         } else {

@@ -79,9 +79,7 @@ class TasksTableViewController: UITableViewController {
         
         let doneAction = UIContextualAction(style: .normal, title: doneTitle) { _, _, isDone in
             StorageManager.shared.done(task, for: isComplete)
-            
             tableView.moveRow(at: indexPath, to: newSection)
-        
             isDone(true)
         }
         
